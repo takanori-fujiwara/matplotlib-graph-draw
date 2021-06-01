@@ -72,24 +72,41 @@ def plot_nw(vertex_positions,
             out_file_name=None,
             out_dir='./images/'):
     '''
-    vertex_positions: 2D vertex positions. shape(number of vertices, 2)
-    edges: a pair of source and target node indices. shape(number of edges, 2)
-    marker: vertex shape (e.g., 'o': circle, '^': triangle)
-    c: default vertex color
-    cmap_type: type of color map
-        default: vertex is colored with default color or color map
-        numeric: vertex is colored by its numeric value
-        cate: vertex is colored by its category/class
-    vertex_size: vertex size
-    vertex_linewidth: vertex line width
-    edge_linewidth: edge line width
-    edge_color: edge color
-    vertex_filter: vertex filter created with graph-tool
-    xlim: x-axis range
-    ylim: y-axis range
-    out_file_name:
+    vertex_positions: float numpy 2D array, shape(number of vertices, 2)
+        2D vertex positions.
+    edges: integer numpy 2D array, shape(number of edges, 2)
+        a pair of source and target node indices.
+    marker: MarkerStyle, default: rcParams["scatter.marker"] (default: 'o')
+        vertex shape (e.g., 'o': circle, '^': triangle)
+        (the same with one in matplotlib's scatter https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+    c: array-like or list of colors or color, optional
+        vertex colors.
+        (the same with one in matplotlib's scatter https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+    cmap_type: 'default' or 'numeric' or 'cate'
+        type of color map
+            default: vertex is colored with matplotlib's default colormap
+            numeric: vertex is colored by its numeric value
+            cate: vertex is colored by its category/class
+    vertex_size: float
+        vertex size
+    vertex_linewidth: float
+        vertex line width
+    edge_linewidth: float
+        edge line width
+    edge_color: color
+        edge color
+    vertex_filter: boolean numpy 1D array, shape(number of vertices,)
+        vertex filter.
+    xlim:
+        x-axis range
+        (the same with one in matplotlib's)
+    ylim:
+        y-axis range
+        (the same with one in matplotlib's
+    out_file_name: string or None
         If None, not saving the result. Otherwise, use this as output file name
-    out_dir: Output file dir.
+    out_dir: string
+        Output file dir.
     '''
     fig = plt.figure(figsize=(4, 4))
 
