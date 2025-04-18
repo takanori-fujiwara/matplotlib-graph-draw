@@ -8,6 +8,7 @@ About
   * Using matplotlib's LineCollection to draw edges relatively fast.
   * Various visual encodings for graph vertices (e.g., colored by numerical and categorical values)
   * Other custom settings, including vertex filtering, saving files, etc.
+  * Graph examples made with this function can be found in: Fujiwara et al., [Network Comparison with Interpretable Contrastive Network Representation Learning](https://jdssv.org/index.php/jdssv/%20article/view/56), JDSSV, 2022
 
 Requirements
 -----
