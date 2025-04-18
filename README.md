@@ -19,7 +19,7 @@ Usage
 * See the documentation of 'plot_nw' in 'graph_draw.py'
 * Also, you can find examples using graph-tool and NetworkX in 'graph_draw.py'.
 
-  `python3 graph_dray.py`
+  `python3 graph_draw.py`
 
   * graph-tool: https://graph-tool.skewed.de/
 
